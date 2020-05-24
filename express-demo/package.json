@@ -1,5 +1,5 @@
 {
-  "name": "npm-demo",
+  "name": "express-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.9.15",
-    "underscore": "^1.10.2"
-  },
-  "devDependencies": {
-    "jshint": "^2.11.1"
+    "express": "^4.17.1"
   }
 }
