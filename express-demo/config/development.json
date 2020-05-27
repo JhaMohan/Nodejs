@@ -1,0 +1,6 @@
+{
+    "name":"my Node-js App",
+    "mail": {
+        "host" : "my App-development"
+    }
+}

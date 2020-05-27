@@ -1,13 +1,48 @@
 const Joi = require('joi')
+const config = require('config')
+const helmet = require('helmet')
+const logger = require('./middleware')
 const express = require('express')
 const app = express()
 
-app.use(express.json())
+
+
+// console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+// console.log(`app: ${app.get('env')}`);
+
+//Configuration
+
+console.log('Application Name: ' , config.get('name'));
+console.log('Mail server: ',config.get('mail.host'))
+
+
+
+
+
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'));
+
+if(app.get('env') === 'development') {
+    app.use(logger);
+    console.log('Morgan enabled.......')
+}
+app.use(logger)
+
+
+
+app.use((req,res,next)=>{
+    console.log('register..........');
+    next();
+});
+
+
+
 
 const course = [
-    {id:1,name:'Adita'},
-    {id:2,name:'Adita2'},
-    {id:3,name:'Adita3'},
+    {id:1,name:'Aditya'},
+    {id:2,name:'Aditya2'},
+    {id:3,name:'Aditya3'},
 ]
 
 // app.get() -> to get the data from server

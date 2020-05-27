@@ -7,3 +7,5 @@
 4. npm i -g npm@5.5.1 (to install package globally)
 
 5. npm i joi (joi package to validate the input field)
+
+6. middle ware is the function which take request and it pass the response  either another middleware or client
