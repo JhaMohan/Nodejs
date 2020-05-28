@@ -1,13 +1,11 @@
 const Joi = require('joi')
 const express = require('express');
 const app = express();
+const geners = require('./routes/geners')
 
-const geners = ["Action","comedy"]
+app.use(express.json())
+app.use('/api/geners',geners)
 
-app.get('/api/geners',(req,res)=>{
-   res.send(geners);
-
-})
 
 const port = process.env.PORT || 3000
 app.listen(port,()=>console.log(`listing at the prot: ${port}.........`))
