@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router();
 
-
-
 const geners = [
     {id:1,name:'Action'},
     {id:2,name:'Horror'},

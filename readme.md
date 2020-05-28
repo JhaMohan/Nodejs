@@ -12,3 +12,5 @@
 
 7. npm i debug (to set debug mode )
    -> const debugStartup = require('debug')('app:startup') //setting the debug mode
+
+8. Promise -> holds the eventual reports of an asynchronous operation 
